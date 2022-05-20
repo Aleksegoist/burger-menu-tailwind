@@ -14,23 +14,44 @@
 </head>
 
 <body>
-    <header>
+    <header class="relative">
         <div class="container">
-            <nav>
-                <a href="#">
-                    <img src="./img/logo.svg" alt="logo">
-                    <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                    </ul>
-                </a>
+            <nav class="flex justify-between items-center pt-[26px]">
+                <a href="#"><img src="./img/logo.svg" alt="logo"></a>
+                <ul class="flex gap-12 md:hidden">
+                    <li><a class="font-medium text-xl text-lightblack hover:text-lightred transition-colors lg:text-base"
+                            href="#">About</a></li>
+                    <li><a class="font-medium text-xl text-lightblack hover:text-lightred transition-colors lg:text-base"
+                            href="#">Services</a></li>
+                    <li><a class="font-medium text-xl text-lightblack hover:text-lightred transition-colors lg:text-base"
+                            href="#">Case Studies</a></li>
+                    <li><a class="font-medium text-xl text-lightblack hover:text-lightred transition-colors lg:text-base"
+                            href="#">Careers</a></li>
+                    <li><a class="font-medium text-xl text-lightblack hover:text-lightred transition-colors lg:text-base"
+                            href="#">Blog</a></li>
+                </ul>
+
+                <!-- hidden menu -->
+                <ul id="menu" class=" hidden absolute left-6 right-6 top-24 bg-lightred flex-col items-center">
+                    <li><a class="py-4 block text-white" href="#">About</a></li>
+                    <li><a class="py-4 block text-white" href="#">Services</a></li>
+                    <li><a class="py-4 block text-white" href="#">Case Studies</a></li>
+                    <li><a class="py-4 block text-white" href="#">Careers</a></li>
+                    <li><a class="py-4 block text-white" href="#">Blog</a></li>
+                </ul>
+
+                <!-- burger button -->
+                <button class="burger hidden md:block">
+                    <span class="burger-line top-line "></span>
+                    <span class="burger-line mid-line "></span>
+                    <span class="burger-line bottom-line "></span>
+                </button>
+
             </nav>
         </div>
     </header>
 
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

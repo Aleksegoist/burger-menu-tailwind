@@ -481,16 +481,165 @@ body {
   max-width: 1080px;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.absolute {
+  position: absolute;
 }
 
-.font-bold {
-  font-weight: 700;
+.relative {
+  position: relative;
 }
 
-.underline {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+.left-6 {
+  left: 1.5rem;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
+.top-24 {
+  top: 6rem;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-12 {
+  gap: 3rem;
+}
+
+.bg-lightred {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 13 56 / var(--tw-bg-opacity));
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.pt-\[26px\] {
+  padding-top: 26px;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.text-lightblack {
+  --tw-text-opacity: 1;
+  color: rgb(77 66 68 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/*---- burger button style start----*/
+
+.burger {
+  height: 20px;
+  position: relative;
+  width: 30px;
+}
+
+.burger-line {
+  display: flex;
+  width: 30px;
+  height: 2px;
+  background: #d70026;
+  transition: 0.3s all ease;
+}
+
+.top-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.mid-line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.bottom-line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.burger.active > .top-line {
+  transform: translateY(8px) rotate(45deg);
+  transition: 0.3s all ease;
+}
+
+.burger.active > .mid-line {
+  opacity: 0;
+  transition: 0.3s all ease;
+}
+
+.burger.active > .bottom-line {
+  transform: translateY(-10px) rotate(-45deg);
+  transition: 0.3s all ease;
+}
+
+/*---- burger button style end----*/
+
+.hover\:text-lightred:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 13 56 / var(--tw-text-opacity));
+}
+
+@media (max-width: 992px) {
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
 }
